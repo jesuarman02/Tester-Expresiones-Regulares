@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones Regulares</title>
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card custom-card">
+                    <div class="card-header">
+                        <h4>Expresiones Regulares Comunes</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>/^\d+$/</strong><br>Solo números enteros</li>
+                            <li class="list-group-item"><strong>/^[a-zA-Z]+$/</strong><br>Solo letras</li>
+                            <li class="list-group-item"><strong>/^[a-zA-Z0-9]+$/</strong><br>Letras y números</li>
+                            <li class="list-group-item"><strong>/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/</strong><br>Correo electrónico</li>
+                            <li class="list-group-item"><strong>/^(https?:\/\/)?([\w.-]+)\.([a-z]{2,6})(\/\S*)?$/</strong><br>URL</li>
+                            <li class="list-group-item"><strong>/^\d{4}-\d{2}-\d{2}$/</strong><br>Fecha (YYYY-MM-DD)</li>
+                            <li class="list-group-item"><strong>/^\+?\d{1,3}\s?\d{1,14}(\s?\d{1,13})?$/</strong><br>Número de teléfono</li>
+                            <li class="list-group-item"><strong>/^[A-Fa-f0-9]{6}$/</strong><br>Color hexadecimal</li>
+                            <li class="list-group-item"><strong>/^[A-Z]+[a-z]+$/</strong><br>Mayúscula al inicio</li>
+                            <li class="list-group-item"><strong>/^.{8,}$/</strong><br>Al menos 8 caracteres</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 input-container">
+                <h3 class="text-center">Validador de Expresiones Regulares</h3>
+                <div class="form-group">
+                    <label for="input">Ingrese la expresión regular:</label>
+                    <input type="text" class="form-control" id="input" placeholder="Ingresa una Expresion">
+                </div>
+                <div class="form-group">
+                    <label for="resultado">Ingrese el valor a validar:</label>
+                    <input type="text" class="form-control" id="resultado">
+                </div>
+                <button class="btn btn-primary" id="validar">Validar</button>
+                <button class="btn btn-secondary" id="limpiar">Limpiar</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./public/js/alerts.js"></script>
+    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/app.min.js"></script>
+</body>
+</html>
